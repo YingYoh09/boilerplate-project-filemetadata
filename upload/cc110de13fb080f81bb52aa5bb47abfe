@@ -1,0 +1,176 @@
+# My dotfiles
+**YOU'D BETTER LOOK AT THE RAW VERSION OF README**
+
+![Dec-2-2021-23-07](screenshots/image.png)
+
+## remove dual boot
+
+<https://www.youtube.com/watch?v=7GRUsnVNLNg>
+
+## Pop OS
+
+### installation
+
+### Grub
+**remember to create an temp boot partition instead of using the old and fuck windows boot entry**
+sudo apt install grub-efi grub2-common grub-customizer
+sudo grub-install
+sudo cp /boot/grub/x86_64-efi/grub.efi /boot/efi/EFI/pop/grubx64.efi
+-> open grub-customizer
+
+### initial
+install [swapfile 8 gb](https://linuxize.com/post/how-to-add-swap-space-on-ubuntu-20-04/)
+
+
+## packages
+| manjaro | vlc                                                                                                                                                                                                                                                                  | video player <https://www.deviantart.com/maverick07x/art/VLC-MinimalX-385698882>                       |
+| flatpak |   gimp                                                                                                                                                                                                                                                               | image editor                                                                                           |
+| apt-get  | git                                                                                                                                                                                                                                                                  |                                                                                                        |
+| apt-get     | yadm                                                                                                                                                                                                                                                                 | dotfiles manager                                                                                       |
+!| yay     | chromium                                                                                                                                                                                                                                                             | sync with dan account                                                                                  |
+| pacman  | firefox                                                                                                                                                                                                                                                              | sync with dan account                                                                                  |
+| command     | fc-cache -f -v| font-awesome icon                                                                                      |
+| apt-get  | fzf                                                                                                                                                                                                                                                                  | command-line fuzzy finder                                                                              |
+| apt-get  | dunst                                                                                                                                                                                                                                                                | lightweight replacement for the notification-daemons                                                   |
+| github     | ibus-bamboo                                                                                                                                                                                                                                                          | vietnamese keyboard systemctl enable ibus     remember to set ibus-engine                                                         |
+
+| pacman | anki                                                            | learn everything                                      |
+!| pacman | okular zathura zathura-pdf-poppler                              | pdf reader                                            |
+| pacman | ripgrep                                                         | line-oriented search tool                             |
+!| pacman | ctags                                                           | generate tag file                                     |
+!| pacman | syncthing                                                       | sync files direct cross devices                       |
+!| pacman | texlive-core texlive-science texlive-pictures texlive-langextra | most needed TeX Live packages (latex)                 |
+!| yay    | tllocalmgr-git                                                  | manage Texlive packages (install...)                  |
+!| yay    | zotero                                                          | reference management software to manage bibliographic |
+!| pip    | sympy                                                           | A computer algebra system written in pure Python      |
+| flatpak    | visual-studio-code-bin                                          | vs-code MS version                                    |
+| flatpak    | obsidian                                                        | temporary note taking, it has graph mind map          |
+| flatpak | com.bitwarden.desktop                                                       | password manager                                      |
+!| yay    | notion-app-enhanced                                             |                                                       |
+
+### i3-gaps
+!| pacman | i3                                           |                                                         |
+!| github | git@github.com:ClydeDroid/rofi-bluetooth.git |                                                         |
+!| pacman | feh                                          | set wallpaper                                           |
+!| yay    | autotiling                                   | i3 auto tilling                                         |
+!| yay    | wmfocus                                      | giong vim-sneak                                         |
+!| yay    | maim xclip                                   | crop screen & copy to clipboard                         |
+!| yay    | i3-resurrect                                 | saving and restoring i3 workspaces                      |
+!| pacman | pulseaudio                                   | to make audio control work, remember pulseaudio --start |
+!|        |                                              | systemctl --user enable pulseaudio                      |
+!| pacman | brightnessctl                                | brightness control                                      |
+
+### polybar
+
+!| yay    | polybar        | status bar                                           |
+!| pip    | simpleaudio    |                                                      |
+!| pacman | pacman-contrib | contains contributed scripts to pacman. help polybar |
+!| yay    | zscroll-git    | text scroller for panels terminals                   |
+!| pacman | jq             | Command-line JSON processor support weather          |
+
+### utilities
+
+!| pacman | xorg-xinput                | configure input devices                        |
+!| yay    | betterlockscreen           | beautiful lock screen for linux                |
+!|        |                            | betterlockscreen --update abc.png neu thay anh |
+!| yay    | bdfresize                  | resize bdf font cua polybar                    |
+| pacman | rofi  1.6.1-1                                | window switcher, run dialog, ssh-launcher               |
+| yay    | rofi-greenclip             | rofi clipboard manager                         |
+!|        |                            | systemctl --user enable greenclip.service      |
+!| pacman | plasma-browser-integration | help playerctl in firefox                      |
+!| pacman | tldr                       | community man page                             |
+!| yay    | tlauncher |  minecraft                                              |
+
+### terminal
+
+| yay    | rxvt-unicode-truecolor urxvt-resize-font-git | true color                      |
+| pacman | zsh                                          |                                 |
+| pacman | tree                                         | show folder tree                |
+| pacman | ranger                                       | file manager text-based         |
+| pacman | bat                                          | cat with code highlight         |
+!| pacman | python-pillow                                | support image preview in ranger |
+!| pacman | thefuck                                      | terminal correction             |
+
+### python
+
+!| pacman | systemd-homed           | support psd                               |
+!| pip    | playsound               | support sound notifi for polybar pomodoro |
+!| pip    | selenium beautifulsoup4 | crawl html python                         |
+!| pip    | simpleaudio             | playaudio files                           |
+
+## neovim
+| pip3   | neovim     | support neovim                 |
+!| npm    | write-good | Naive linter for English prose |
+!| pacman | proselint  | A linter for prose.            |
+!| pip3   | yq         | taking notes                   |
+
+## Inititial
+
+## update location
+polybar weather, redshift
+
+## syncthing
+add devices using $syncthing
+systemctl --user enable syncthing
+
+## 1st thing after install
+
+<https://youtu.be/jW4GFGOIUjc>
+
+## Anki
+- Plugins:
+    - AwesomeTTS 1436550454 [link](https://languagetools.anki.study/tutorials/awesometts-getting-started?utm_campaign=addonpage_awesometts&utm_source=ankiweb&utm_medium=web)
+        - need `pacman -S mpv`
+    - ReviewHeatmap 723520343
+    - Image Occlusion Enhanced 1374772155
+    - ankiconnect 2055492159
+    - Pop-up dictionary Beta 153625306
+    - Redesign
+    - Accelerate Image Drag And Drop
+    - Symbols
+- md to anki
+    - [obsidian to anki](https://github.com/Pseudonium/Obsidian_to_Anki)
+        - need `pip install gooey`
+        - `python ~/Obsidian_to_Anki-3.4.1/obsidian_to_anki.py -R ~/Documents/notes/College/Fall-2021/Vocabulary -r`
+
+## zsh shell
+`chsh -s /bin/zsh`
+### install oh-my-zsh
+
+`ZSH="$HOME/.config/oh-my-zsh" sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`
+
+### additional plugin not included in oh-my-zsh
+
+| zsh-autosuggestions     | `git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions`             |
+| zsh-syntax-highlighting | `git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting` |
+| zsh-autopair            | `git clone https://github.com/hlissner/zsh-autopair.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autopair`             |
+| zsh-completions         | `git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions`                     |
+| vivid                   | generate ls_colors                                                                                                                      |
+
+## nvim
+
+## latex
+sudo pacman -S texlive-core texlive-science texlive-pictures texlive-langextra
+
+yay tllocalmgr-git // manage Texlive packages
+
+tllocalmgr install apa6
+
+## Chrome
+
+cycle through last used tab [link](https://superuser.com/questions/104917/chrome-tab-ordering/1326712#1326712)
+
+- adblock: ublock, nano defender, [FMSF-2](https://nmtrung.com/fmsf-2/)
+
+## Turn on bluetooth on startup (before X)
+enable system update bluez
+bluetoothctl trust <id>
+vi /etc/bluetooth/main.conf
+AutoEnable=true
+
+## commands
+- fontconfig để install font `fc-cache -v`
+- focus left window
+`dbus-send --session --dest=com.System76.PopShell --type=method_call /com/System76/PopShell com.System76.PopShell.FocusLeft`
+- focus right window
+`dbus-send --session --dest=com.System76.PopShell --type=method_call /com/System76/PopShell com.System76.PopShell.FocusRight`
